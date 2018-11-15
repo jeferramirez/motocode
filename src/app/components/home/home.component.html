@@ -1,3 +1,78 @@
-<p>
-  home works!
-</p>
+<div class="image-container set-full-height" style="background-image: url('assets/img/city.jpg')">
+  <!-- Made With Material Kit -->
+  <a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
+    <div class="brand">MC</div>
+    <div class="made-with">Made with
+      <strong>MotoCode</strong>
+    </div>
+  </a>
+
+  <!-- Big container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <!-- Wizard container -->
+        <div class="wizard-container">
+          <div class="card wizard-card" data-color="blue" id="wizard">
+            <form action="" method="">
+              <!--
+                You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"
+              -->
+
+              <div class="wizard-header">
+                <h3 class="wizard-title"> TOTAL DE VEHICULOS INGRESADOS</h3>
+              </div>
+              <div class="wizard-navigation">
+                <ul>
+
+                  <li>
+                    <a href="#details" data-toggle="tab"> MOTOS </a>
+
+                  </li>
+                  <li>
+                    <a href="#deta" data-toggle="tab"> CARROS </a>
+
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane" id="details">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h1 class="info-text">
+                        {{motos}}
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="deta">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h1 class="info-text">
+                        {{carros}}
+                      </h1>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+        <!-- wizard container -->
+      </div>
+    </div>
+    <!-- row -->
+  </div>
+  <!-- big container -->
+
+  <div class="footer">
+    <div class="container text-center">
+      Made with
+      <i class="fa fa-heart heart"></i> by MotoCode
+    </div>
+  </div>
+</div>

@@ -26,7 +26,8 @@ export class RegistroComponent implements OnInit {
     noPlaca: '',
     noChasis: '',
     noMotor: '',
-    tipo: ''
+    tipo: '',
+    ingreso: false
   };
 
   constructor(public afs: AngularFirestore ) { }

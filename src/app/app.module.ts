@@ -14,6 +14,8 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { GenericService } from './services/generic/generic.service';
+import { RouterModule } from './router/router.module';
+import { RouterRoutingModule } from './router/routing-manager';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import { GenericService } from './services/generic/generic.service';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule
+    AngularFireStorageModule,
+    RouterRoutingModule
 
   ],
   providers: [

@@ -1,3 +1,138 @@
-<p>
-  inicio works!
-</p>
+<div class="image-container set-full-height" style="background-image: url('assets/img/city.jpg')">
+  <!-- Made With Material Kit -->
+  <a href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard" class="made-with-mk">
+    <div class="brand">MC</div>
+    <div class="made-with">Made with
+      <strong>MotoCode</strong>
+    </div>
+  </a>
+
+  <!-- Big container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <!-- Wizard container -->
+        <div class="wizard-container">
+          <div class="card wizard-card" data-color="blue" id="wizard">
+            <form action="" method="">
+              <!--
+                You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"
+              -->
+
+              <div class="wizard-header">
+                <h3 class="wizard-title">INFORMACION DE VEHICULO UNIAJC</h3>
+              </div>
+              <div class="wizard-navigation">
+                <ul>
+
+                  <li>
+                    <a href="#details" data-toggle="tab"> Datos del Vehiculo </a>
+
+                  </li>
+
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane" id="details">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h4 class="info-text">
+
+                      </h4>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">bookmark</i>
+                        </span>
+                        <div class="form-group label-floating">
+                          <label>Marca </label>
+                          <input disabled [(ngModel)]="this.registro.marca" name="marca" type="text" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">assignment</i>
+                        </span>
+                        <div class="form-group label-floating">
+                          <label>Modelo</label>
+                          <input disabled name="modelo" type="text" class="form-control" [(ngModel)]="this.registro.modelo" />
+                        </div>
+                      </div>
+
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">network_check </i>
+                        </span>
+                        <div class="form-group label-floating">
+                          <label>Numero de Chasis</label>
+                          <input disabled [(ngModel)]="this.registro.noChasis" name="chasis" type="text" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">list </i>
+                        </span>
+                        <div class="form-group label-floating">
+                          <label>Numero Licencia de Transito</label>
+                          <input disabled [(ngModel)]="this.registro.noLicencia" name="nolicencia" type="text" class="form-control" />
+                        </div>
+                      </div>
+
+
+
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">assignment</i>
+                        </span>
+                        <div class="form-group label-floating">
+                          <label> Numero de Placa</label>
+                          <input disabled [(ngModel)]="this.registro.noPlaca" name="placa" type="text" class="form-control" />
+                        </div>
+                      </div>
+
+
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">settings </i>
+                        </span>
+                        <div class="form-group label-floating">
+                          <label>Numero de Motor</label>
+                          <input disabled [(ngModel)]="this.registro.noMotor" name="nomotor" type="text" class="form-control" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 text-center">
+                      <input id="finisher" *ngIf="!this.registro.ingreso" type="button" class="btn  btn-success" (click)="changeStatus(true)"
+                        name="finisher" value="Ingresa" />
+                      <input id="finish" *ngIf="this.registro.ingreso" type="button" class="btn btn-danger" (click)="changeStatus(false)"
+                        name="finish" value="Sale" />
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+
+            </form>
+          </div>
+        </div>
+        <!-- wizard container -->
+      </div>
+    </div>
+    <!-- row -->
+  </div>
+  <!-- big container -->
+
+  <div class="footer">
+    <div class="container text-center">
+      Made with
+      <i class="fa fa-heart heart"></i> by MotoCode
+    </div>
+  </div>
+</div>

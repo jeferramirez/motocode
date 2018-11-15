@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  carros = 0;
+  motos = 0;
+  constructor(private afs: AngularFirestore) { }
 
   ngOnInit() {
+
+    this.afs.collection('qr-code').doc('contador').snapshotChanges().subscribe(doc => {
+      this.carros = doc.payload.data()['carros'];
+      this.motos = doc.payload.data()['motos'];
+    });
+
   }
 
 }
