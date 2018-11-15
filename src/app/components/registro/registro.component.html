@@ -137,7 +137,7 @@
                           rel="tooltip"
                           title="This is good if you travel alone."
                         >
-                          <input [(ngModel)]="this.registro.tipo" type="radio" name="motocicleta" value="motocicleta" />
+                          <input (click)="tipo('moto')" type="radio" name="motocicleta" value="moto"/>
                           <div class="icon">
                             <i class="material-icons">motorcycle</i>
                           </div>
@@ -151,7 +151,7 @@
                           rel="tooltip"
                           title="Select this room if you're traveling with your family."
                         >
-                          <input  type="radio" name="automovil" value="automovil" />
+                          <input  (click)="tipo('automovil')"  type="radio" name="automovil"  />
                           <div class="icon">
                             <i class="material-icons">airport_shuttle</i>
                           </div>
