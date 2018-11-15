@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { GenericService } from '../../services/generic/generic.service';
 import { AngularFirestore  } from '@angular/fire/firestore';
 import * as QRCode from 'qrcode';
+import swal from 'sweetalert2';
+
 // tslint:disable-next-line:import-spacing
 import { saveAs } from 'file-saver';
 import * as JSZip from 'jszip';
@@ -16,7 +18,7 @@ export class RegistroComponent implements OnInit {
   QrCantidad;
   base64;
   zip = new JSZip();
-  img = this.zip.folder('images');
+  img;
   registro = {
     marca : '',
     modelo : '',
@@ -43,6 +45,13 @@ export class RegistroComponent implements OnInit {
     this.afs.collection('qr-code').add( this.registro).then( data => {
 
       console.log('se agrego' , data.id);
+
+      swal({
+        type: 'success',
+        title: 'Registro almacenado correctamente',
+        showConfirmButton: true
+      });
+      this.genQr(data.id);
     } );
 
 
@@ -52,11 +61,11 @@ export class RegistroComponent implements OnInit {
 
 
   genQr(id) {
-
+    this.img = '';
     const urlQR = window.location.origin + '/get-code/ ' + id;
 
-
-    QRCode.toDataURL(urlQR, { errorCorrectionLevel: 'M' })
+     this.img = this.zip.folder('images');
+      QRCode.toDataURL(urlQR, { errorCorrectionLevel: 'M' })
         .then(url => {
           this.QRimage = url;
           this.base64 = this.QRimage.split(',')[1];
