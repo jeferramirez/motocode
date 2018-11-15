@@ -61,7 +61,6 @@ export class RegistroComponent implements OnInit {
 
 
   genQr(id) {
-    this.img = '';
     const urlQR = window.location.origin + '/get-code/ ' + id;
 
      this.img = this.zip.folder('images');
