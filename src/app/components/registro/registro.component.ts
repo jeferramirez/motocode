@@ -1,13 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { GenericService } from '../../services/generic/generic.service';
 import { AngularFirestore  } from '@angular/fire/firestore';
+import * as QRCode from 'qrcode';
+import { saveAs } from 'file-saver/FileSaver';
+import * as JSZip from 'jszip';
+
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
   styleUrls: ['./registro.component.css']
 })
 export class RegistroComponent implements OnInit {
-
+  QRimage;
+  QrCantidad;
+  base64;
+  zip = new JSZip();
+  img = this.zip.folder('images');
   registro = {
     marca : '',
     modelo : '',
@@ -37,10 +45,43 @@ export class RegistroComponent implements OnInit {
     } );
 
 
+
+
   }
 
-  tipo( tip) {
-    this.registro.tipo = tip;
+
+  genQr(id) {
+
+    const urlQR = window.location.origin + '/get-code/ ' + id;
+
+
+    QRCode.toDataURL(urlQR, { errorCorrectionLevel: 'M' })
+        .then(url => {
+          this.QRimage = url;
+          this.base64 = this.QRimage.split(',')[1];
+
+
+          const image = this.img.file('qrcode' + id + '.png', this.base64, { base64: true });
+          console.log('image content', image);
+
+
+
+            this.zip.generateAsync({ type: 'blob' }).then((content) => {
+              // see FileSaver.js
+
+              console.log('este es el content', content);
+              saveAs(content, 'qrcodes.zip');
+            });
+
+
+
+          console.log(url);
+        });
+
+  }
+
+  tipo( type ) {
+    this.registro.tipo = type;
   }
 
 }

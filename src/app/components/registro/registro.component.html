@@ -132,12 +132,13 @@
                     <div class="col-sm-10 col-sm-offset-1">
                       <div class="col-sm-6">
                         <div
+                        (click)="tipo('moto')"
                           class="choice"
                           data-toggle="wizard-radio"
                           rel="tooltip"
                           title="This is good if you travel alone."
                         >
-                          <input (click)="tipo('moto')" type="radio" name="motocicleta" value="moto"/>
+                          <input type="radio" name="motocicleta" value="moto"/>
                           <div class="icon">
                             <i class="material-icons">motorcycle</i>
                           </div>
@@ -146,6 +147,7 @@
                       </div>
                       <div class="col-sm-6">
                         <div
+                        (click)="tipo('automovil')"
                           class="choice"
                           data-toggle="wizard-radio"
                           rel="tooltip"
