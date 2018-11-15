@@ -13,6 +13,7 @@ export class RegistroComponent implements OnInit {
     modelo : '',
     noLicencia : '',
     noPlaca: '',
+    noChasis: '',
     noMotor: '',
     tipo: ''
   };

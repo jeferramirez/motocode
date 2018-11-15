@@ -56,7 +56,7 @@
                         </span>
                         <div class="form-group label-floating">
                           <label class="control-label">Marca </label>
-                          <input  [(ngModel)]="this.registro.marca" name="name" type="text" class="form-control" />
+                          <input  [(ngModel)]="this.registro.marca" name="marca" type="text" class="form-control" />
                         </div>
                       </div>
 
@@ -81,7 +81,7 @@
                           </span>
                           <div class="form-group label-floating">
                             <label class="control-label">Numero de Chasis</label>
-                            <input [(ngModel)]="this.registro.marca"  name="name" type="text" class="form-control" />
+                            <input [(ngModel)]="this.registro.noChasis" name="chasis"  type="text" class="form-control" />
                           </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                             </span>
                             <div class="form-group label-floating">
                               <label class="control-label">Numero Licencia de Transito</label>
-                              <input  [(ngModel)]="this.registro.noLicencia" name=""   type="text" class="form-control" />
+                              <input  [(ngModel)]="this.registro.noLicencia" name="nolicencia"   type="text" class="form-control" />
                             </div>
                           </div>
 
@@ -137,7 +137,7 @@
                           rel="tooltip"
                           title="This is good if you travel alone."
                         >
-                          <input [(ngModel)]="this.registro.tipo" type="radio" name="tipom" value="motocicleta" />
+                          <input [(ngModel)]="this.registro.tipo" type="radio" name="motocicleta" value="motocicleta" />
                           <div class="icon">
                             <i class="material-icons">motorcycle</i>
                           </div>
@@ -151,7 +151,7 @@
                           rel="tooltip"
                           title="Select this room if you're traveling with your family."
                         >
-                          <input  [(ngModel)]="this.registro.tipo"  type="radio" name="tipoc" value="automovil" />
+                          <input  type="radio" name="automovil" value="automovil" />
                           <div class="icon">
                             <i class="material-icons">airport_shuttle</i>
                           </div>
