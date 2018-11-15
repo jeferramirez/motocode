@@ -37,10 +37,17 @@ export class RegistroComponent implements OnInit {
     } );
 
 
+
+
   }
 
-  tipo( tip) {
-    this.registro.tipo = tip;
+
+  genQr() {
+
+  }
+
+  tipo( type ) {
+    this.registro.tipo = type;
   }
 
 }
