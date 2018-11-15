@@ -8,14 +8,21 @@ import { GenericService } from '../../services/generic/generic.service';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor(  private _servicePark: GenericService ) { }
+  registro = {
+    marca : '',
+    modelo : '',
+    noLicencia : '',
+    noPlaca: '',
+    noMotor: '',
+    tipo: ''
+  };
+  constructor(  ) { }
 
   ngOnInit() {
   }
 
 
   addNewCode() {
-
   }
 
 }
