@@ -4,6 +4,6 @@ import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firest
 @Injectable()
 export class GenericService {
 
-  constructor( private afs: AngularFirestore) { }
+  constructor( public afs: AngularFirestore) { }
 
 }

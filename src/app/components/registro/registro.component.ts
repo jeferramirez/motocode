@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GenericService } from '../../services/generic/generic.service';
 
 @Component({
   selector: 'app-registro',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistroComponent implements OnInit {
 
-  constructor() { }
+  constructor(  private _servicePark: GenericService ) { }
 
   ngOnInit() {
+  }
+
+
+  addNewCode() {
+
   }
 
 }

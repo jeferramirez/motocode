@@ -56,7 +56,7 @@
                         </span>
                         <div class="form-group label-floating">
                           <label class="control-label">Marca </label>
-                          <input name="name" type="text" class="form-control" />
+                          <input  [(ngModel)]="this.registro.marca" name="name" type="text" class="form-control" />
                         </div>
                       </div>
 
@@ -197,9 +197,9 @@
                   />
                   <input
                     type="button"
-                    class="btn btn-finish btn-fill btn-danger btn-wd"
+                    class="btn btn-finish btn-fill btn-info btn-wd"
                     name="finish"
-                    value="Finish"
+                    value="Guardar Datos"
                   />
                 </div>
                 <div class="pull-left">
