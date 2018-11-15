@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GenericService } from '../../services/generic/generic.service';
-
+import { AngularFirestore  } from '@angular/fire/firestore';
 @Component({
   selector: 'app-registro',
   templateUrl: './registro.component.html',
@@ -17,13 +17,20 @@ export class RegistroComponent implements OnInit {
     noMotor: '',
     tipo: ''
   };
-  constructor(  ) { }
+  constructor(public afs: AngularFirestore ) { }
 
   ngOnInit() {
   }
 
 
   addNewCode() {
+
+    console.log('entro');
+    this.afs.collection('qr-code').add( this.registro).then( data => {
+
+      console.log('se agrego' , data.id);
+    } );
+
   }
 
 }
