@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { GenericService } from '../../services/generic/generic.service';
 import { AngularFirestore  } from '@angular/fire/firestore';
 import * as QRCode from 'qrcode';
-import { saveAs } from 'file-saver/FileSaver';
+// tslint:disable-next-line:import-spacing
+import { saveAs } from 'file-saver';
 import * as JSZip from 'jszip';
 
 @Component({
