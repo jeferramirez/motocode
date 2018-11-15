@@ -1,0 +1,222 @@
+<div
+  class="image-container set-full-height"
+  style="background-image: url('assets/img/city.jpg')"
+>
+  <!-- Made With Material Kit -->
+  <a
+    href="http://demos.creative-tim.com/material-kit/index.html?ref=material-bootstrap-wizard"
+    class="made-with-mk"
+  >
+    <div class="brand">MK</div>
+    <div class="made-with">Made with <strong>Material Kit</strong></div>
+  </a>
+
+  <!-- Big container -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-2">
+        <!-- Wizard container -->
+        <div class="wizard-container">
+          <div class="card wizard-card" data-color="blue" id="wizard">
+            <form action="" method="">
+              <!--
+                You can switch " data-color="blue" "  with one of the next bright colors: "green", "orange", "red", "purple"
+              -->
+
+              <div class="wizard-header">
+                <h3 class="wizard-title">REGISTRO DE VEHICULO UNIAJC</h3>
+              </div>
+              <div class="wizard-navigation">
+                <ul>
+                  <li>
+                      <a href="#captain" data-toggle="tab"> Seleccion Vehiculo </a>
+                  </li>
+                  <li>
+                      <a href="#details" data-toggle="tab"> Datos del Vehiculo </a>
+
+                  </li>
+                  <li>
+                    <a href="#description" data-toggle="tab">Adjuntar Informacion</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content">
+                <div class="tab-pane" id="details">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <h4 class="info-text">
+
+                      </h4>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">email</i>
+                        </span>
+                        <div class="form-group label-floating">
+                          <label class="control-label">Marca </label>
+                          <input name="name" type="text" class="form-control" />
+                        </div>
+                      </div>
+
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <i class="material-icons">lock_outline</i>
+                        </span>
+                        <div class="form-group label-floating">
+                          <label class="control-label">Modelo</label>
+                          <input
+                            name="name2"
+                            type="text"
+                            class="form-control"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">network_check </i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label">Numero Licencia de Transito</label>
+                              <input name="name" type="text" class="form-control" />
+                            </div>
+                          </div>
+
+                          <div class="input-group">
+                            <span class="input-group-addon">
+                              <i class="material-icons">lock_outline</i>
+                            </span>
+                            <div class="form-group label-floating">
+                              <label class="control-label"> Numero de Placa</label>
+                              <input
+                                name="name2"
+                                type="text"
+                                class="form-control"
+                              />
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="captain">
+                  <h4 class="info-text">What type of room would you want?</h4>
+                  <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                      <div class="col-sm-4">
+                        <div
+                          class="choice"
+                          data-toggle="wizard-radio"
+                          rel="tooltip"
+                          title="This is good if you travel alone."
+                        >
+                          <input type="radio" name="job" value="Design" />
+                          <div class="icon">
+                            <i class="material-icons">motorcycle</i>
+                          </div>
+                          <h6>Motocileta</h6>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div
+                          class="choice"
+                          data-toggle="wizard-radio"
+                          rel="tooltip"
+                          title="Select this room if you're traveling with your family."
+                        >
+                          <input type="radio" name="job" value="Code" />
+                          <div class="icon">
+                            <i class="material-icons">airport_shuttle</i>
+                          </div>
+                          <h6>Automovil</h6>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" id="description">
+                  <div class="row">
+                    <h4 class="info-text">Drop us a small description.</h4>
+                    <div class="col-sm-6 col-sm-offset-1">
+                      <div class="form-group">
+                        <label>Room description</label>
+                        <textarea
+                          class="form-control"
+                          placeholder=""
+                          rows="6"
+                        ></textarea>
+                      </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <div class="form-group">
+                        <label class="control-label">Example</label>
+                        <p class="description">
+                          "The room really nice name is recognized as being a
+                          really awesome room. We use it every sunday when we go
+                          fishing and we catch a lot. It has some kind of magic
+                          shield around it."
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="wizard-footer">
+                <div class="pull-right">
+                  <input
+                    type="button"
+                    class="btn btn-next btn-fill btn-success btn-wd"
+                    name="next"
+                    value="Siguiente"
+                  />
+                  <input
+                    type="button"
+                    class="btn btn-finish btn-fill btn-danger btn-wd"
+                    name="finish"
+                    value="Finish"
+                  />
+                </div>
+                <div class="pull-left">
+                  <input
+                    type="button"
+                    class="btn btn-previous btn-fill btn-default btn-wd"
+                    name="previous"
+                    value="Previous"
+                  />
+
+                  <div class="footer-checkbox">
+                    <div class="col-sm-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" name="optionsCheckboxes" />
+                        </label>
+                        Subscribe to our newsletter
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- wizard container -->
+      </div>
+    </div>
+    <!-- row -->
+  </div>
+  <!-- big container -->
+
+  <div class="footer">
+    <div class="container text-center">
+      Made with <i class="fa fa-heart heart"></i> by
+      <a href="http://www.creative-tim.com">Creative Tim</a>. Free download
+      <a href="http://www.creative-tim.com/product/material-bootstrap-wizard"
+        >here.</a
+      >
+    </div>
+  </div>
+</div>
