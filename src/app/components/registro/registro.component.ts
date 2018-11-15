@@ -62,7 +62,7 @@ export class RegistroComponent implements OnInit {
 
 
   genQr(id) {
-    const urlQR = window.location.origin + '/get-code/ ' + id;
+    const urlQR = `${window.location.origin}/get-code/${id}`;
 
      this.img = this.zip.folder('images');
       QRCode.toDataURL(urlQR, { errorCorrectionLevel: 'M' })

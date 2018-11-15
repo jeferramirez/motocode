@@ -17,7 +17,6 @@ import { GenericService } from './services/generic/generic.service';
 import { RouterModule } from './router/router.module';
 import { RouterRoutingModule } from './router/routing-manager';
 
-
 @NgModule({
   declarations: [
     AppComponent,
